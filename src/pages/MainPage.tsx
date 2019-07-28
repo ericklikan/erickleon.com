@@ -17,7 +17,7 @@ interface IProperties {
 }
 
 @observer
-class MainPage extends React.Component<IProperties> {
+export default class MainPage extends React.Component<IProperties> {
 	constructor(props: IProperties) {
 		super(props)
 		this.toggleSidebar = this.toggleSidebar.bind(this)
@@ -44,5 +44,3 @@ class MainPage extends React.Component<IProperties> {
 		)
 	}
 }
-
-export default MainPage

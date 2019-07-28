@@ -10,7 +10,7 @@ interface IState {
 	isHovered: boolean
 }
 
-export default class SectionTitle extends React.Component<IProps, IState> {
+class SectionTitle extends React.Component<IProps, IState> {
 	constructor(props: IProps) {
 		super(props)
 		this.state = {
@@ -39,3 +39,5 @@ export default class SectionTitle extends React.Component<IProps, IState> {
 		)
 	}
 }
+
+export default SectionTitle

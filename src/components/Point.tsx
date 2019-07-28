@@ -21,7 +21,7 @@ interface IPoint {
 	hover: boolean
 }
 
-export default (props: IPoint) => {
+const Point = (props: IPoint) => {
 	const size = props.hover ? DIMENSIONS.INNER_POINT_SIZE_HOVERED : DIMENSIONS.INNER_POINT_SIZE
 	return (
 		<OuterCircle>
@@ -34,3 +34,5 @@ export default (props: IPoint) => {
 		</OuterCircle>
 	)
 }
+
+export default Point
