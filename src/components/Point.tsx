@@ -17,11 +17,11 @@ const InnerCircle = styled.div`
 	transition: height ${ANIMATION.POINT}, width ${ANIMATION.POINT};
 `
 
-interface IPoint {
+interface IProperties {
 	hover: boolean
 }
 
-const Point = (props: IPoint) => {
+const Point = (props: IProperties) => {
 	const size = props.hover ? DIMENSIONS.INNER_POINT_SIZE_HOVERED : DIMENSIONS.INNER_POINT_SIZE
 	return (
 		<OuterCircle>

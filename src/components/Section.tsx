@@ -13,7 +13,6 @@ export const Container = styled.div`
 const ContentContainer = styled.div`
 	margin: 0;
 	padding: 0 30pt 0 20pt;
-	display: flex;
 `
 const LineContainer = styled.div`
 	width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
@@ -27,11 +26,12 @@ const Line = styled.div`
 	background-color: ${COLORS.SIDE_LINE_COLOR};
 	border-radius: 3pt;
 `
-interface IProps {
+
+interface IProperties {
 	title: string
 }
 
-const Section: React.FC<IProps> = props => (
+const Section: React.FC<IProperties> = props => (
 	<div>
 		<SectionTitle title={props.title} />
 		<Container>
