@@ -12,11 +12,14 @@ export const DIMENSIONS = {
 
 	TITLE_SIZE: '30pt',
 	SUBTITLE_SIZE: '30pt',
-	TEXT_SIZE: '20pt',
+	TEXT_SIZE: '15pt',
+
+	SECTION_SIDE_LENGTH: '65pt',
 }
 
 export const COLORS = {
 	SIDEBAR_BACKGROUND_COLOR: '#0A369D',
+	SIDE_LINE_COLOR: '#2B2B2B',
 	TEXT_COLOR: '#2B2B2B',
 }
 

@@ -21,10 +21,11 @@ export const Subtitle = styled.p`
 	font-weight: 600;
 	font-size: ${DIMENSIONS.SUBTITLE_SIZE};
 	color: ${COLORS.TEXT_COLOR};
+	margin: 0;
 `
 
 // Use for normal text
-export const Text = styled.p`
+export const TextContent = styled.p`
 	font-family: 'Montserrat', sans-serif;
 	font-size: ${DIMENSIONS.TEXT_SIZE};
 	color: ${COLORS.TEXT_COLOR};

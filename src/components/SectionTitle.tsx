@@ -1,6 +1,25 @@
 import * as React from 'react'
 import Point from 'components/Point'
-import { Subtitle } from './Styled'
+import { Subtitle } from 'components/Styled'
+import styled from 'styled-components'
+import { Container } from 'components/Section'
+import { DIMENSIONS } from 'App/AppConstants'
+
+const PointContainer = styled.div`
+	height: ${DIMENSIONS.SECTION_SIDE_LENGTH};
+	width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
+	min-width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`
+const TextContainer = styled.div`
+	width: 100%;
+	margin: 0;
+	padding-left: 20pt;
+	display: flex;
+	align-items: center;
+`
 
 interface IProps {
 	title: string
@@ -30,12 +49,14 @@ class SectionTitle extends React.Component<IProps, IState> {
 
 	public render() {
 		return (
-			<div onMouseEnter={this.setHoveredOn} onMouseLeave={this.setHoveredOff}>
-				<span>
+			<Container onMouseEnter={this.setHoveredOn} onMouseLeave={this.setHoveredOff}>
+				<PointContainer>
 					<Point hover={this.state.isHovered} />
+				</PointContainer>
+				<TextContainer>
 					<Subtitle>{this.props.title}</Subtitle>
-				</span>
-			</div>
+				</TextContainer>
+			</Container>
 		)
 	}
 }
