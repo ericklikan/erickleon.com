@@ -18,6 +18,8 @@ const LogoContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	border-radius: 20pt;
+	margin-top: 10pt;
+	margin-bottom: 10pt;
 `
 const Logo = styled.img`
 	width: ${DIMENSIONS.EXPERIENCE_LOGO_SIZE};
