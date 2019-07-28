@@ -17,6 +17,9 @@ const TextContainer = styled.div`
 const ImageContainer = styled.div`
 	float: right;
 	width: 150pt;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	${AboutImage}:hover {
 		box-shadow: 5pt 5pt 10pt grey;
 		transform: translate(-1pt, -1pt);
@@ -24,6 +27,7 @@ const ImageContainer = styled.div`
 `
 const FlexContainer = styled.div`
 	display: flex;
+	padding: 0 30pt 0 20pt;
 `
 
 class About extends React.Component<any> {
@@ -39,8 +43,8 @@ class About extends React.Component<any> {
 							feeling of turning ideas a reality and it’s what led me to becoming a
 							developer.
 							<br /> <br />
-							In my spare time you can find me drinking some coffees, going to the
-							gym, or going on hikes.
+							In my spare time you can find me drinking some coffees, at the gym, or
+							going on hikes.
 						</TextContent>
 					</TextContainer>
 					<ImageContainer>

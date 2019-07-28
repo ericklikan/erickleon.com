@@ -8,13 +8,12 @@ const OuterCircle = styled.div`
 	justify-content: center;
 	align-items: center;
 	background-color: #4472ca;
-	height: ${DIMENSIONS.OUTER_POINT_SIZE};
-	width: ${DIMENSIONS.OUTER_POINT_SIZE};
+	transition: ${ANIMATION.POINT_OUTER};
 `
 const InnerCircle = styled.div`
 	border-radius: 50%;
 	background-color: #0a369d;
-	transition: height ${ANIMATION.POINT}, width ${ANIMATION.POINT};
+	transition: ${ANIMATION.POINT_INNER};
 `
 
 interface IProperties {
@@ -22,13 +21,18 @@ interface IProperties {
 }
 
 const Point = (props: IProperties) => {
-	const size = props.hover ? DIMENSIONS.INNER_POINT_SIZE_HOVERED : DIMENSIONS.INNER_POINT_SIZE
+	const inner = props.hover ? DIMENSIONS.INNER_POINT_SIZE_HOVERED : DIMENSIONS.INNER_POINT_SIZE
+	const outer = props.hover ? DIMENSIONS.OUTER_POINT_SIZE_HOVERED : DIMENSIONS.OUTER_POINT_SIZE
 	return (
-		<OuterCircle>
+		<OuterCircle
+			style={{
+				width: outer,
+				height: outer,
+			}}>
 			<InnerCircle
 				style={{
-					width: size,
-					height: size,
+					width: inner,
+					height: inner,
 				}}
 			/>
 		</OuterCircle>

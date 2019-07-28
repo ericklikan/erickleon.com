@@ -6,6 +6,8 @@ import { DIMENSIONS, ANIMATION } from 'App/AppConstants'
 
 import Introduction from 'sections/Introduction'
 import About from 'sections/About'
+import Experience from 'sections/Experience'
+import Projects from 'sections/Projects'
 
 const Page = styled.div`
 	height: 100%;
@@ -40,6 +42,8 @@ export default class MainPage extends React.Component<IProperties> {
 				<button onClick={this.toggleSidebar}>Open</button>
 				<Introduction />
 				<About />
+				<Experience />
+				<Projects />
 			</Page>
 		)
 	}

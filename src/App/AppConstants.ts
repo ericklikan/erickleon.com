@@ -9,6 +9,7 @@ export const DIMENSIONS = {
 	INNER_POINT_SIZE: '15pt',
 	INNER_POINT_SIZE_HOVERED: '20pt',
 	OUTER_POINT_SIZE: '30pt',
+	OUTER_POINT_SIZE_HOVERED: '35pt',
 
 	TITLE_SIZE: '30pt',
 	SUBTITLE_SIZE: '30pt',
@@ -25,5 +26,6 @@ export const COLORS = {
 
 export const ANIMATION = {
 	SIDEBAR: '200ms',
-	POINT: '100ms',
+	POINT_INNER: '300ms',
+	POINT_OUTER: '400ms',
 }

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import SectionTitle from './SectionTitle'
+import SectionTitle from 'components/SectionTitle'
+import Line from 'components/Line'
 import { DIMENSIONS, COLORS } from 'App/AppConstants'
 
 export const Container = styled.div`
@@ -12,19 +13,12 @@ export const Container = styled.div`
 `
 const ContentContainer = styled.div`
 	margin: 0;
-	padding: 0 30pt 0 20pt;
 `
 const LineContainer = styled.div`
 	width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
 	min-width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
 	display: flex;
 	justify-content: center;
-`
-const Line = styled.div`
-	height: 100%;
-	width: 6pt;
-	background-color: ${COLORS.SIDE_LINE_COLOR};
-	border-radius: 3pt;
 `
 
 interface IProperties {
