@@ -9,6 +9,7 @@ const AboutImage = styled.img`
 	height: auto;
 	border-radius: 20pt;
 	transition: 0.5s;
+	box-shadow: 2pt 2pt 5pt grey;
 `
 const TextContainer = styled.div`
 	padding-right: 20pt;
@@ -38,7 +39,7 @@ class About extends React.Component<any> {
 					<TextContainer>
 						<TextContent>
 							I’m currently a third year Computer Engineering student at Waterloo.
-							From a young age I’ve been a builder. Beginning with building Legos to
+							From a young age I’ve been a builder. Beginning with Lego creations to
 							building PCs, and then moving onto electronic projects. I just love that
 							feeling of turning ideas a reality and it’s what led me to becoming a
 							developer.

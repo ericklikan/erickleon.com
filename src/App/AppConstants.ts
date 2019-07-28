@@ -16,6 +16,8 @@ export const DIMENSIONS = {
 	TEXT_SIZE: '15pt',
 
 	SECTION_SIDE_LENGTH: '65pt',
+
+	EXPERIENCE_LOGO_SIZE: '50pt',
 }
 
 export const COLORS = {

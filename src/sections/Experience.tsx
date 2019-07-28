@@ -2,7 +2,9 @@ import * as React from 'react'
 import styled from 'styled-components'
 import Section from 'components/Section'
 import { COLORS } from 'App/AppConstants'
-import Point from 'components/Point'
+import ExperienceSubSection from './ExperienceSubSection'
+import { TextContent } from 'components/Styled'
+import KikLogo from 'static/kikLogo.svg'
 
 const StartLine = styled.div`
 	height: 70pt;
@@ -11,20 +13,30 @@ const StartLine = styled.div`
 	border-radius: 3pt;
 	transform: translate(0pt, -10pt) rotate(-35deg);
 `
-// possibly remove this
-const EndLine = styled.div`
-	height: 70pt;
-	width: 6pt;
-	background-color: ${COLORS.SIDE_LINE_COLOR};
-	border-radius: 3pt;
-	transform: translate(0pt, 10pt) rotate(35deg);
-`
+
 class Experience extends React.Component<any> {
 	public render() {
 		return (
 			<Section title="Experience">
 				<StartLine />
-				<EndLine />
+				<ExperienceSubSection
+					companyLogo={KikLogo}
+					companyName={'Kik'}
+					title={'backend dev'}>
+					<TextContent>During my time at Kik</TextContent>
+				</ExperienceSubSection>
+				<ExperienceSubSection
+					companyLogo={''}
+					companyName={'Secret Mission Software'}
+					title={'backend dev'}>
+					<TextContent>Secret Mission Software</TextContent>
+				</ExperienceSubSection>
+				<ExperienceSubSection
+					companyLogo={''}
+					companyName={'Sensors & Software'}
+					title={'backend dev'}>
+					<TextContent>Sensors and Software</TextContent>
+				</ExperienceSubSection>
 			</Section>
 		)
 	}
