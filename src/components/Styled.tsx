@@ -16,16 +16,17 @@ export const Title = styled.p`
 `
 
 // Use for section title
-export const Subtitle = styled.p`
+export const SectionTitleContent = styled.p`
 	font-family: 'Montserrat';
 	font-weight: 600;
-	font-size: ${DIMENSIONS.SUBTITLE_SIZE};
+	font-size: ${DIMENSIONS.SECTION_TITLE_SIZE};
 	color: ${COLORS.TEXT_COLOR};
 	margin: 0;
 `
 
 // Use for normal text
 export const TextContent = styled.p`
+	line-height: 1.4;
 	font-family: 'Montserrat', sans-serif;
 	font-size: ${DIMENSIONS.TEXT_SIZE};
 	color: ${COLORS.TEXT_COLOR};

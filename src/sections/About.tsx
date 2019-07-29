@@ -9,6 +9,7 @@ const AboutImage = styled.img`
 	height: auto;
 	border-radius: 20pt;
 	transition: 0.5s;
+	box-shadow: 2pt 2pt 5pt grey;
 `
 const TextContainer = styled.div`
 	padding-right: 20pt;
@@ -17,6 +18,9 @@ const TextContainer = styled.div`
 const ImageContainer = styled.div`
 	float: right;
 	width: 150pt;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	${AboutImage}:hover {
 		box-shadow: 5pt 5pt 10pt grey;
 		transform: translate(-1pt, -1pt);
@@ -24,6 +28,7 @@ const ImageContainer = styled.div`
 `
 const FlexContainer = styled.div`
 	display: flex;
+	padding: 0 0 0 20pt;
 `
 
 class About extends React.Component<any> {
@@ -33,14 +38,20 @@ class About extends React.Component<any> {
 				<FlexContainer>
 					<TextContainer>
 						<TextContent>
-							I’m currently a third year Computer Engineering student at Waterloo.
-							From a young age I’ve been a builder. Beginning with building Legos to
-							building PCs, and then moving onto electronic projects. I just love that
-							feeling of turning ideas a reality and it’s what led me to becoming a
-							developer.
-							<br /> <br />
-							In my spare time you can find me drinking some coffees, going to the
-							gym, or going on hikes.
+							<p>
+								I’m currently in third year studying Computer Engineering at
+								Waterloo.
+							</p>
+							<p>
+								I've been a builder since I was a kid. Beginning with Lego creations
+								to building PCs, and then moving onto electronic projects. I just
+								love that feeling of turning ideas a reality and it’s what led me to
+								becoming a developer.
+							</p>
+							<p>
+								In my spare time you can find me drinking some coffees, at the gym,
+								or going on hikes.
+							</p>
 						</TextContent>
 					</TextContainer>
 					<ImageContainer>
