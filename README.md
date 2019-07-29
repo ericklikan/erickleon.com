@@ -7,6 +7,12 @@ yarn install
 yarn start
 ```
 
+## Deployment
+
+```bash
+firebase deploy
+```
+
 ## Libraries
 
 -   [`TypeScript`](https://www.typescriptlang.org/)
