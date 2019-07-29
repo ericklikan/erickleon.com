@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Point from 'components/Point'
-import { Subtitle } from 'components/Styled'
+import { SectionTitleContent } from 'components/Styled'
 import styled from 'styled-components'
 import { Container } from 'components/Section'
 import { DIMENSIONS } from 'App/AppConstants'
@@ -54,7 +54,7 @@ class SectionTitle extends React.Component<IProps, IState> {
 					<Point hover={this.state.isHovered} />
 				</PointContainer>
 				<TextContainer>
-					<Subtitle>{this.props.title}</Subtitle>
+					<SectionTitleContent>{this.props.title}</SectionTitleContent>
 				</TextContainer>
 			</Container>
 		)

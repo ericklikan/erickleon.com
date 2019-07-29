@@ -18,7 +18,9 @@ const LineContainer = styled.div`
 	justify-content: center;
 `
 const ContentContainer = styled.div`
+	width: 100%;
 	margin: 0;
+	padding: 0 30pt 0 0;
 `
 
 interface IProperties {
