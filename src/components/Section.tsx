@@ -9,7 +9,7 @@ export const Container = styled.div`
 	flex-direction: row;
 	justify-content: flex-start;
 	align-content: center;
-	padding: 0 0 0 0;
+	margin: 0;
 `
 export const LineContainer = styled.div`
 	width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
@@ -19,8 +19,6 @@ export const LineContainer = styled.div`
 `
 const ContentContainer = styled.div`
 	width: 100%;
-	margin: 0;
-	padding-right: 40px;
 `
 
 interface IProperties {
