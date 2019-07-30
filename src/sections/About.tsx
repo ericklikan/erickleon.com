@@ -5,30 +5,30 @@ import { TextContent } from 'components/Styled'
 import about from 'static/about.jpg'
 
 const AboutImage = styled.img`
-	width: 150pt;
+	width: 200px;
 	height: auto;
-	border-radius: 20pt;
+	border-radius: 30px;
 	transition: 0.5s;
-	box-shadow: 2pt 2pt 5pt grey;
+	box-shadow: 5px 5px 10px grey;
 `
 const TextContainer = styled.div`
-	padding-right: 20pt;
+	padding-right: 30px;
 	flex: auto;
 `
 const ImageContainer = styled.div`
 	float: right;
-	width: 150pt;
+	width: 200px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	${AboutImage}:hover {
-		box-shadow: 5pt 5pt 10pt grey;
-		transform: translate(-1pt, -1pt);
+		box-shadow: 10px 10px 20px grey;
+		transform: translate(-2px, -2px);
 	}
 `
 const FlexContainer = styled.div`
 	display: flex;
-	padding: 0 0 0 20pt;
+	padding: 0 0 0 20px;
 `
 
 class About extends React.Component<any> {

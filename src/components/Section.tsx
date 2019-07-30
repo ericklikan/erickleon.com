@@ -11,7 +11,7 @@ export const Container = styled.div`
 	align-content: center;
 	padding: 0 0 0 0;
 `
-const LineContainer = styled.div`
+export const LineContainer = styled.div`
 	width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
 	min-width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
 	display: flex;
@@ -20,7 +20,7 @@ const LineContainer = styled.div`
 const ContentContainer = styled.div`
 	width: 100%;
 	margin: 0;
-	padding: 0 30pt 0 0;
+	padding-right: 40px;
 `
 
 interface IProperties {

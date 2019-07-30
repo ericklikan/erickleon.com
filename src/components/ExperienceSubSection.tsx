@@ -8,8 +8,8 @@ const Container = styled.div`
 	flex-direction: row;
 	justify-content: flex-start;
 	align-content: center;
-	padding: 0 0 0 10pt;
-	transform: translate(0, -15pt);
+	padding: 0 0 0 20px;
+	transform: translate(0, -20px);
 `
 const LogoContainer = styled.div`
 	height: ${DIMENSIONS.EXPERIENCE_LOGO_SIZE};
@@ -17,9 +17,8 @@ const LogoContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-radius: 20pt;
-	margin-top: 10pt;
-	margin-bottom: 10pt;
+	margin-top: 20px;
+	margin-bottom: 20px;
 `
 const Logo = styled.img`
 	width: ${DIMENSIONS.EXPERIENCE_LOGO_SIZE};
@@ -27,7 +26,7 @@ const Logo = styled.img`
 const TextContainer = styled.div`
 	width: 100%;
 	margin: 0;
-	padding-left: 30pt;
+	padding-left: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -41,13 +40,13 @@ const CompanyName = styled.p`
 `
 const Title = styled.p`
 	font-weight: 400;
-	font-size: 13pt;
+	font-size: 20px;
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 `
 const Timeline = styled.div`
 	font-weight: 400;
-	font-size: 13pt;
+	font-size: 20px;
 	font-family: 'Montserrat', sans-serif;
 	margin: 0;
 `
@@ -58,7 +57,7 @@ const LineContainer = styled.div`
 	justify-content: center;
 `
 const ContentContainer = styled.div`
-	padding-left: 30pt;
+	padding-left: 40px;
 `
 
 interface IProperties {

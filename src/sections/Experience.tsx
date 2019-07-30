@@ -9,11 +9,11 @@ import SMSLogo from 'static/SMSLogo.png'
 import SensoftLogo from 'static/sensoftLogo.png'
 
 const StartLine = styled.div`
-	height: 70pt;
-	width: 5pt;
+	height: 100px;
+	width: 6px;
 	background-color: ${COLORS.SIDE_LINE_COLOR};
-	border-radius: 4pt;
-	transform: translate(7pt, -10pt) rotate(-35deg);
+	border-radius: 3px;
+	transform: translate(12px, -15px) rotate(-35deg);
 `
 
 class Experience extends React.Component<any> {
