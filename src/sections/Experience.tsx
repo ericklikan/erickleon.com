@@ -1,19 +1,22 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Section from 'components/Section'
-import { COLORS } from 'App/AppConstants'
-import ExperienceSubSection from './ExperienceSubSection'
+import { COLORS, DIMENSIONS } from 'App/AppConstants'
+import ExperienceSubSection from 'components/ExperienceSubSection'
 import { TextContent } from 'components/Styled'
 import KikLogo from 'static/kikLogo.svg'
 import SMSLogo from 'static/SMSLogo.png'
 import SensoftLogo from 'static/sensoftLogo.png'
 
 const StartLine = styled.div`
-	height: 70pt;
-	width: 5pt;
+	height: 100px;
+	width: 6px;
 	background-color: ${COLORS.SIDE_LINE_COLOR};
-	border-radius: 4pt;
-	transform: translate(7pt, -10pt) rotate(-35deg);
+	border-radius: 3px;
+	transform: translate(12px, -15px) rotate(-35deg);
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		display: none;
+	}
 `
 
 class Experience extends React.Component<any> {

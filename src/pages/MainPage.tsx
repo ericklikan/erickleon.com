@@ -1,7 +1,8 @@
 import * as React from 'react'
-import { AppState } from 'App/AppState'
 import styled from 'styled-components'
 import { observer } from 'mobx-react'
+
+import { AppState } from 'App/AppState'
 import { DIMENSIONS, ANIMATION } from 'App/AppConstants'
 
 import Introduction from 'sections/Introduction'
@@ -12,6 +13,16 @@ import Projects from 'sections/Projects'
 const Page = styled.div`
 	height: 100%;
 	transition: margin-left ${ANIMATION.SIDEBAR};
+	display: flex;
+	justify-content: center;
+`
+const Centered = styled.div`
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_L}) {
+		width: 100%;
+	}
+	@media only screen and (min-width: ${DIMENSIONS.BREAK_XL}) {
+		width: ${DIMENSIONS.BREAK_XL};
+	}
 `
 
 interface IProperties {
@@ -39,11 +50,12 @@ export default class MainPage extends React.Component<IProperties> {
 						? DIMENSIONS.SIDEBAR_WIDTH_OPEN
 						: DIMENSIONS.SIDEBAR_WIDTH_CLOSE,
 				}}>
-				<button onClick={this.toggleSidebar}>Open</button>
-				<Introduction />
-				<About />
-				<Experience />
-				<Projects />
+				<Centered>
+					<Introduction />
+					<About />
+					<Experience />
+					<Projects />
+				</Centered>
 			</Page>
 		)
 	}
