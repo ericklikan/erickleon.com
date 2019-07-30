@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Section from 'components/Section'
 import { TextContent } from 'components/Styled'
 import about from 'static/about.jpg'
+import { DIMENSIONS } from 'App/AppConstants'
 
 const AboutImage = styled.img`
 	width: 200px;
@@ -17,7 +18,7 @@ const TextContainer = styled.div`
 `
 const ImageContainer = styled.div`
 	float: right;
-	width: 200px;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -28,7 +29,11 @@ const ImageContainer = styled.div`
 `
 const FlexContainer = styled.div`
 	display: flex;
-	padding: 0 0 0 20px;
+	padding-left: 20px;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		flex-direction: column;
+		padding-bottom: 40px;
+	}
 `
 
 class About extends React.Component<any> {
@@ -38,20 +43,17 @@ class About extends React.Component<any> {
 				<FlexContainer>
 					<TextContainer>
 						<TextContent>
-							<p>
-								I’m currently in third year studying Computer Engineering at
-								Waterloo.
-							</p>
-							<p>
-								I've been a builder since I was a kid. Beginning with Lego creations
-								to building PCs, and then moving onto electronic projects. I just
-								love that feeling of turning ideas a reality and it’s what led me to
-								becoming a developer.
-							</p>
-							<p>
-								In my spare time you can find me drinking some coffees, at the gym,
-								or going on hikes.
-							</p>
+							I’m currently in third year studying Computer Engineering at Waterloo.
+						</TextContent>
+						<TextContent>
+							I've been a builder since I was a kid. Beginning with Lego creations to
+							building PCs, and then moving onto electronic projects. I just love that
+							feeling of turning ideas a reality and it’s what led me to becoming a
+							developer.
+						</TextContent>
+						<TextContent>
+							In my spare time you can find me drinking some coffees, at the gym, or
+							going on hikes.
 						</TextContent>
 					</TextContainer>
 					<ImageContainer>

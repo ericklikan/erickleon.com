@@ -8,8 +8,12 @@ const Container = styled.div`
 	flex-direction: row;
 	justify-content: flex-start;
 	align-content: center;
-	padding: 0 0 0 20px;
+	padding-left: 20px;
 	transform: translate(0, -20px);
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		padding-top: 30px;
+		padding-left: 0;
+	}
 `
 const LogoContainer = styled.div`
 	height: ${DIMENSIONS.EXPERIENCE_LOGO_SIZE};
@@ -30,6 +34,10 @@ const TextContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 `
 const CompanyName = styled.p`
 	font-family: 'Montserrat';
@@ -55,9 +63,15 @@ const LineContainer = styled.div`
 	min-width: ${DIMENSIONS.EXPERIENCE_LOGO_SIZE};
 	display: flex;
 	justify-content: center;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		display: none;
+	}
 `
 const ContentContainer = styled.div`
 	padding-left: 40px;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		padding-left: 0;
+	}
 `
 
 interface IProperties {

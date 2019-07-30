@@ -24,7 +24,7 @@ export const DIMENSIONS = {
 	BREAK_S: '600px',
 	BREAK_M: '768px',
 	BREAK_L: '992px',
-	BREAK_XL: '1200',
+	BREAK_XL: '1200px',
 }
 
 export const COLORS = {

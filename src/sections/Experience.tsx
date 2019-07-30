@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Section from 'components/Section'
-import { COLORS } from 'App/AppConstants'
+import { COLORS, DIMENSIONS } from 'App/AppConstants'
 import ExperienceSubSection from 'components/ExperienceSubSection'
 import { TextContent } from 'components/Styled'
 import KikLogo from 'static/kikLogo.svg'
@@ -14,6 +14,9 @@ const StartLine = styled.div`
 	background-color: ${COLORS.SIDE_LINE_COLOR};
 	border-radius: 3px;
 	transform: translate(12px, -15px) rotate(-35deg);
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		display: none;
+	}
 `
 
 class Experience extends React.Component<any> {
