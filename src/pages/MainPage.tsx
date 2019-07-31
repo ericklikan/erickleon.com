@@ -13,10 +13,16 @@ import Projects from 'sections/Projects'
 const Page = styled.div`
 	height: 100%;
 	transition: margin-left ${ANIMATION.SIDEBAR};
+	margin-left: ${DIMENSIONS.SIDEBAR_WIDTH_CLOSE};
 	display: flex;
 	justify-content: center;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		margin-left: 0;
+	}
 `
 const Centered = styled.div`
+	margin-left: 20px;
+	margin-right: 20px;
 	@media only screen and (max-width: ${DIMENSIONS.BREAK_L}) {
 		width: 100%;
 	}
@@ -44,12 +50,7 @@ export default class MainPage extends React.Component<IProperties> {
 
 	public render() {
 		return (
-			<Page
-				style={{
-					marginLeft: this.props.appState.sidebarIsOpen
-						? DIMENSIONS.SIDEBAR_WIDTH_OPEN
-						: DIMENSIONS.SIDEBAR_WIDTH_CLOSE,
-				}}>
+			<Page>
 				<Centered>
 					<Introduction />
 					<About />

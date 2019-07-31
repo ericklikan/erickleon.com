@@ -16,7 +16,7 @@ const PointContainer = styled.div`
 const TextContainer = styled.div`
 	width: 100%;
 	margin: 0;
-	padding-left: 30px;
+	margin-left: 50px;
 	display: flex;
 	align-items: center;
 `

@@ -8,11 +8,11 @@ const Container = styled.div`
 	flex-direction: row;
 	justify-content: flex-start;
 	align-content: center;
-	padding-left: 20px;
+	margin-left: 20px;
 	transform: translate(0, -20px);
 	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
-		padding-top: 30px;
-		padding-left: 0;
+		margin-top: 30px;
+		margin-left: 0;
 	}
 `
 const LogoContainer = styled.div`
@@ -23,6 +23,9 @@ const LogoContainer = styled.div`
 	align-items: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		margin-right: 20px;
+	}
 `
 const Logo = styled.img`
 	width: ${DIMENSIONS.EXPERIENCE_LOGO_SIZE};
@@ -30,7 +33,7 @@ const Logo = styled.img`
 const TextContainer = styled.div`
 	width: 100%;
 	margin: 0;
-	padding-left: 40px;
+	margin-left: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -68,9 +71,9 @@ const LineContainer = styled.div`
 	}
 `
 const ContentContainer = styled.div`
-	padding-left: 40px;
+	margin-left: 40px;
 	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
-		padding-left: 0;
+		margin-left: 0;
 	}
 `
 

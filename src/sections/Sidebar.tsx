@@ -18,6 +18,11 @@ const SidebarNav = styled.div`
 	&:hover {
 		width: ${DIMENSIONS.SIDEBAR_WIDTH_OPEN};
 	}
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
 `
 
 @observer

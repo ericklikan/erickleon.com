@@ -1,9 +1,41 @@
 import * as React from 'react'
 import Section from 'components/Section'
+import ProjectSubSection from 'components/ProjectSubSection'
+import { DIMENSIONS, COLORS } from 'App/AppConstants'
+import styled from 'styled-components'
 
+const LineContainer = styled.div`
+	transform: translate(-8px, -16px);
+`
+const ProjectsContainer = styled.div`
+	transform: translateY(-35px);
+`
 class Projects extends React.Component<any> {
 	public render() {
-		return <Section title="Projects" />
+		return (
+			<Section title="Projects">
+				<LineContainer>
+					<svg viewBox="0 0 250 50">
+						<line
+							x1="2"
+							y1="2"
+							x2="118"
+							y2="49"
+							vectorEffect="non-scaling-stroke"
+							style={{
+								stroke: COLORS.SIDE_LINE_COLOR,
+								strokeWidth: '6px',
+								strokeLinecap: 'round',
+							}}
+						/>
+						Sorry, your browser does not support inline SVG.
+					</svg>
+				</LineContainer>
+				<ProjectsContainer>
+					<ProjectSubSection index={1}></ProjectSubSection>
+				</ProjectsContainer>
+			</Section>
+		)
 	}
 }
 

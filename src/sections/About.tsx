@@ -13,7 +13,7 @@ const AboutImage = styled.img`
 	box-shadow: 5px 5px 10px grey;
 `
 const TextContainer = styled.div`
-	padding-right: 30px;
+	margin-right: 30px;
 	flex: auto;
 `
 const ImageContainer = styled.div`
@@ -29,10 +29,11 @@ const ImageContainer = styled.div`
 `
 const FlexContainer = styled.div`
 	display: flex;
-	padding-left: 20px;
+	margin-left: 20px;
 	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
 		flex-direction: column;
-		padding-bottom: 40px;
+		margin-bottom: 40px;
+		margin-left: 0px;
 	}
 `
 
