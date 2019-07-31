@@ -23,7 +23,9 @@ const LogoContainer = styled.div`
 	align-items: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	margin-right: 20px;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		margin-right: 20px;
+	}
 `
 const Logo = styled.img`
 	width: ${DIMENSIONS.EXPERIENCE_LOGO_SIZE};
@@ -69,6 +71,7 @@ const LineContainer = styled.div`
 	}
 `
 const ContentContainer = styled.div`
+	margin-left: 40px;
 	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
 		margin-left: 0;
 	}

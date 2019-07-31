@@ -11,7 +11,7 @@ export const Container = styled.div`
 	align-content: center;
 	margin: 0;
 `
-export const LineContainer = styled.div`
+const LineContainer = styled.div`
 	width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
 	min-width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
 	display: flex;
