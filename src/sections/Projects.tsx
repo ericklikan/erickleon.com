@@ -1,12 +1,15 @@
 import * as React from 'react'
 import Section from 'components/Section'
+import ProjectSubSection from 'components/ProjectSubSection'
 import { DIMENSIONS, COLORS } from 'App/AppConstants'
 import styled from 'styled-components'
 
 const LineContainer = styled.div`
 	transform: translate(-8px, -16px);
 `
-
+const ProjectsContainer = styled.div`
+	transform: translateY(-35px);
+`
 class Projects extends React.Component<any> {
 	public render() {
 		return (
@@ -16,8 +19,8 @@ class Projects extends React.Component<any> {
 						<line
 							x1="2"
 							y1="2"
-							x2="123"
-							y2="48"
+							x2="118"
+							y2="49"
 							vectorEffect="non-scaling-stroke"
 							style={{
 								stroke: COLORS.SIDE_LINE_COLOR,
@@ -28,6 +31,9 @@ class Projects extends React.Component<any> {
 						Sorry, your browser does not support inline SVG.
 					</svg>
 				</LineContainer>
+				<ProjectsContainer>
+					<ProjectSubSection index={1}></ProjectSubSection>
+				</ProjectsContainer>
 			</Section>
 		)
 	}
