@@ -22,7 +22,7 @@ const TextContainer = styled.div`
 `
 
 interface IProps {
-	title: string
+	title?: string
 }
 
 interface IState {

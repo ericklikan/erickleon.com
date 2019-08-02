@@ -1,7 +1,8 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { DIMENSIONS, COLORS } from 'App/AppConstants'
+import { DIMENSIONS } from 'App/AppConstants'
 import Line from 'components/Line'
+import { Subtitle } from './Styled'
 
 const Container = styled.div`
 	display: flex;
@@ -41,13 +42,6 @@ const TextContainer = styled.div`
 		flex-direction: column;
 		align-items: flex-start;
 	}
-`
-const CompanyName = styled.p`
-	font-family: 'Montserrat';
-	font-weight: 600;
-	font-size: ${DIMENSIONS.SUBTITLE_SIZE};
-	color: ${COLORS.TEXT_COLOR};
-	margin: 0;
 `
 const Title = styled.p`
 	font-weight: 400;
@@ -94,7 +88,7 @@ class ExperienceSubSection extends React.Component<IProperties> {
 					</LogoContainer>
 					<TextContainer>
 						<div>
-							<CompanyName>{this.props.companyName}</CompanyName>
+							<Subtitle>{this.props.companyName}</Subtitle>
 							<Title>{this.props.title}</Title>
 						</div>
 						<Timeline>{this.props.timeline}</Timeline>

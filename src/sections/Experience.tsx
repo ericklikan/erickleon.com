@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import Section from 'components/Section'
 import { COLORS, DIMENSIONS } from 'App/AppConstants'
 import ExperienceSubSection from 'components/ExperienceSubSection'
-import { TextContent } from 'components/Styled'
+import { TextContent, EndSpace } from 'components/Styled'
+
 import KikLogo from 'static/kikLogo.svg'
 import SMSLogo from 'static/SMSLogo.png'
 import SensoftLogo from 'static/sensoftLogo.png'
@@ -80,6 +81,7 @@ class Experience extends React.Component<any> {
 						analytics reports of what features people used the most on the radar.
 					</TextContent>
 				</ExperienceSubSection>
+				<EndSpace />
 			</Section>
 		)
 	}

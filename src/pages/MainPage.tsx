@@ -9,6 +9,8 @@ import Introduction from 'sections/Introduction'
 import About from 'sections/About'
 import Experience from 'sections/Experience'
 import Projects from 'sections/Projects'
+import End from 'sections/End'
+import Footer from 'sections/Footer'
 
 const Page = styled.div`
 	height: 100%;
@@ -56,6 +58,8 @@ export default class MainPage extends React.Component<IProperties> {
 					<About />
 					<Experience />
 					<Projects />
+					<End />
+					<Footer />
 				</Centered>
 			</Page>
 		)

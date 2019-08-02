@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Section from 'components/Section'
-import { TextContent } from 'components/Styled'
+import { TextContent, EndSpace } from 'components/Styled'
 import about from 'static/about.jpg'
 import { DIMENSIONS } from 'App/AppConstants'
 
@@ -22,10 +22,6 @@ const ImageContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	${AboutImage}:hover {
-		box-shadow: 10px 10px 20px grey;
-		transform: translate(-2px, -2px);
-	}
 `
 const FlexContainer = styled.div`
 	display: flex;
@@ -61,6 +57,7 @@ class About extends React.Component<any> {
 						<AboutImage src={about} />
 					</ImageContainer>
 				</FlexContainer>
+				<EndSpace />
 			</Section>
 		)
 	}
