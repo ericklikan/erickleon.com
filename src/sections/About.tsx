@@ -8,17 +8,13 @@ import { DIMENSIONS } from 'App/AppConstants'
 const AboutImage = styled.img`
 	width: 200px;
 	height: auto;
-	border-radius: 30px;
-	transition: 0.5s;
-	box-shadow: 5px 5px 10px grey;
+	border-radius: ${DIMENSIONS.IMAGE_BORDER_RADIUS};
 `
 const TextContainer = styled.div`
 	margin-right: 30px;
-	flex: auto;
 `
 const ImageContainer = styled.div`
 	float: right;
-	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -40,17 +36,21 @@ class About extends React.Component<any> {
 				<FlexContainer>
 					<TextContainer>
 						<TextContent>
-							I’m currently in third year studying Computer Engineering at Waterloo.
+							I’m currently a third year Computer Engineering student at Waterloo and
+							pursuing a career as a software developer.
 						</TextContent>
 						<TextContent>
-							I've been a builder since I was a kid. Beginning with Lego creations to
-							building PCs, and then moving onto electronic projects. I just love that
-							feeling of turning ideas a reality and it’s what led me to becoming a
-							developer.
+							So far, I've had three amazing work terms learning something a little
+							bit different each time, but each time I take one step in becoming a
+							better developer.
 						</TextContent>
 						<TextContent>
-							In my spare time you can find me drinking some coffees, at the gym, or
-							going on hikes.
+							In my spare time you can find me drinking coffee (count the cups I'm
+							holding{' '}
+							<span role="img" aria-label="coffee">
+								☕
+							</span>
+							), at the gym, going on hikes, and working on super cool projects.
 						</TextContent>
 					</TextContainer>
 					<ImageContainer>

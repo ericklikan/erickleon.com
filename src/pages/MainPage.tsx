@@ -29,7 +29,7 @@ const Centered = styled.div`
 		width: 100%;
 	}
 	@media only screen and (min-width: ${DIMENSIONS.BREAK_XL}) {
-		width: ${DIMENSIONS.BREAK_XL};
+		width: ${DIMENSIONS.BREAK_L};
 	}
 `
 

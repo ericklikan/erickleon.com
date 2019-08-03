@@ -9,27 +9,28 @@ export const Centered = styled.div`
 
 // Use for Page title
 export const Title = styled.p`
-	font-family: 'Montserrat', sans-serif;
+	font-family: monospace;
 	font-weight: 500;
 	font-size: ${DIMENSIONS.TITLE_SIZE};
-	color: ${COLORS.TEXT_COLOR};
+	color: #3d3d3d;
 `
 
 // Use for section title
 export const SectionTitleContent = styled.p`
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	font-size: ${DIMENSIONS.SECTION_TITLE_SIZE};
-	color: ${COLORS.TEXT_COLOR};
+	color: #3d3d3d;
 	margin: 0;
 `
 
 // Use for normal text
 export const TextContent = styled.p`
-	line-height: 1.4;
+	line-height: 2;
 	font-family: 'Montserrat', sans-serif;
 	font-size: ${DIMENSIONS.TEXT_SIZE};
 	color: ${COLORS.TEXT_COLOR};
+	margin-bottom: 25px;
 `
 
 // Use for subtitles
@@ -37,7 +38,7 @@ export const Subtitle = styled.p`
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	font-size: ${DIMENSIONS.SUBTITLE_SIZE};
-	color: ${COLORS.TEXT_COLOR};
+	color: #3d3d3d;
 	margin: 0;
 `
 

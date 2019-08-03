@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { DIMENSIONS } from 'App/AppConstants'
 import Point from './Point'
 import Line from './Line'
-import { Subtitle, TextContent } from './Styled'
+import { Subtitle } from './Styled'
 
 const Container = styled.div`
 	display: flex;
@@ -47,9 +47,11 @@ const TextContainer = styled.div`
 	width: 100%;
 	display: flex;
 	justify-items: center;
+	align-items: center;
 `
 const Text = styled.div`
-	margin: 50px 50px 50px 50px;
+	margin-left: 50px;
+	margin-right: 50px;
 	width: 100%;
 `
 const ImageContainer = styled.div`
@@ -58,26 +60,40 @@ const ImageContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 `
-const Image = styled.img`
-	width: 100%;
-	height: auto;
-	background-color: blue;
-	border-radius: 30px;
-	transition: 0.5s;
-	box-shadow: 5px 5px 10px grey;
-`
 
 interface IProperties {
 	title: string
-	image: string
+	image: React.ReactElement
+}
+interface IState {
+	isHovered: boolean
 }
 
-class ProjectSubSection extends React.Component<IProperties> {
+class ProjectSubSection extends React.Component<IProperties, IState> {
+	constructor(props: IProperties) {
+		super(props)
+		this.state = {
+			isHovered: false,
+		}
+		this.setHoveredOff = this.setHoveredOff.bind(this)
+		this.setHoveredOn = this.setHoveredOn.bind(this)
+	}
+
+	private setHoveredOn() {
+		this.setState({ isHovered: true })
+	}
+
+	private setHoveredOff() {
+		this.setState({ isHovered: false })
+	}
+
 	public render() {
 		return (
 			<Container>
 				<ContentContainer>
-					<TitleContainer>
+					<TitleContainer
+						onMouseEnter={this.setHoveredOn}
+						onMouseLeave={this.setHoveredOff}>
 						<Subtitle>{this.props.title}</Subtitle>
 					</TitleContainer>
 					<TextContainer>
@@ -85,8 +101,10 @@ class ProjectSubSection extends React.Component<IProperties> {
 					</TextContainer>
 				</ContentContainer>
 				<SeparatorContainer>
-					<PointContainer>
-						<Point hover={false} />
+					<PointContainer
+						onMouseEnter={this.setHoveredOn}
+						onMouseLeave={this.setHoveredOff}>
+						<Point hover={this.state.isHovered} />
 					</PointContainer>
 					<LineContainer>
 						<Line />
@@ -94,9 +112,7 @@ class ProjectSubSection extends React.Component<IProperties> {
 				</SeparatorContainer>
 				<ContentContainer>
 					<TitleContainer />
-					<ImageContainer>
-						<Image src={this.props.image} alt={`${this.props.title} picture`} />
-					</ImageContainer>
+					<ImageContainer>{this.props.image}</ImageContainer>
 				</ContentContainer>
 			</Container>
 		)

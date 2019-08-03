@@ -37,7 +37,8 @@ const TextContainer = styled.div`
 	margin-left: 40px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
+	flex-direction: column;
 	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
 		flex-direction: column;
 		align-items: flex-start;
@@ -46,13 +47,8 @@ const TextContainer = styled.div`
 const Title = styled.p`
 	font-weight: 400;
 	font-size: 20px;
-	font-family: 'Montserrat', sans-serif;
-	margin: 0;
-`
-const Timeline = styled.div`
-	font-weight: 400;
-	font-size: 20px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: monospace;
+	color: #696969;
 	margin: 0;
 `
 const LineContainer = styled.div`
@@ -87,11 +83,8 @@ class ExperienceSubSection extends React.Component<IProperties> {
 						<Logo src={this.props.companyLogo} alt={this.props.companyName} />
 					</LogoContainer>
 					<TextContainer>
-						<div>
-							<Subtitle>{this.props.companyName}</Subtitle>
-							<Title>{this.props.title}</Title>
-						</div>
-						<Timeline>{this.props.timeline}</Timeline>
+						<Subtitle>{this.props.companyName}</Subtitle>
+						<Title>{this.props.title}</Title>
 					</TextContainer>
 				</Container>
 				<Container>
