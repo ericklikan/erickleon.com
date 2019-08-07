@@ -36,8 +36,9 @@ class About extends React.Component<any> {
 				<FlexContainer>
 					<TextContainer>
 						<TextContent>
-							I’m currently a third year Computer Engineering student at Waterloo and
-							pursuing a career as a software developer.
+							I’m currently a third year <b>Computer Engineering</b> student at{' '}
+							<b>Waterloo</b> looking to pursue a career as a{' '}
+							<b>software developer</b>.
 						</TextContent>
 						<TextContent>
 							So far, I've had three amazing work terms learning something a little
@@ -45,12 +46,12 @@ class About extends React.Component<any> {
 							better developer.
 						</TextContent>
 						<TextContent>
-							In my spare time you can find me drinking coffee (count the cups I'm
-							holding{' '}
+							In my spare time you can find me drinking <b>coffee</b> (count the cups
+							I'm holding{' '}
 							<span role="img" aria-label="coffee">
 								☕
 							</span>
-							), at the gym, going on hikes, and working on super cool projects.
+							), at the gym, or working on super cool projects.
 						</TextContent>
 					</TextContainer>
 					<ImageContainer>

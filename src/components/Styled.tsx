@@ -9,10 +9,15 @@ export const Centered = styled.div`
 
 // Use for Page title
 export const Title = styled.p`
+	text-align: center;
+	margin: auto;
 	font-family: monospace;
 	font-weight: 500;
 	font-size: ${DIMENSIONS.TITLE_SIZE};
 	color: #3d3d3d;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		font-size: 32px;
+	}
 `
 
 // Use for section title

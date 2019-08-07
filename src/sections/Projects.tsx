@@ -10,6 +10,9 @@ import { EndSpace, TextContent } from 'components/Styled'
 
 const LineContainer = styled.div`
 	transform: translate(-8px, -16px);
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		display: none;
+	}
 `
 const ProjectsContainer = styled.div`
 	transform: translateY(-35px);
@@ -49,17 +52,19 @@ class Projects extends React.Component<any> {
 				<ProjectsContainer>
 					<ProjectSubSection
 						title="Autogardener"
-						image={<StyledAutoGardenerImage src={AutogardenerImage} />}>
+						image={<StyledAutoGardenerImage src={AutogardenerImage} />}
+						githubLink="https://github.com/ericklikan/autogardener-dashboard">
 						<TextContent>
 							I started working on this because I wanted to start growing some hot
-							peppers and soon enough, I had both hot peppers and a fully automated
-							gardening device. This project included a dashboard to monitor and water
-							the plants, even a voice control feature!
+							peppers and soon enough, I not only had hot pepper, but a fully
+							automated gardening device. This project included a dashboard to monitor
+							and water the plants, even a voice control feature!
 						</TextContent>
 					</ProjectSubSection>
 					<ProjectSubSection
 						title="Playmoji"
-						image={<StyledPlaymojiImage src={PlaymojiImage} />}>
+						image={<StyledPlaymojiImage src={PlaymojiImage} />}
+						githubLink="https://github.com/Jli0423/PlayMoji">
 						<TextContent>
 							Playmoji is an emoji-to-playlist converter that we built at EngHack
 							2019. Using a series of emojis that's on your mind, your favourite

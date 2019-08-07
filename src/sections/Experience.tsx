@@ -28,12 +28,14 @@ class Experience extends React.Component<any> {
 				<ExperienceSubSection
 					companyLogo={KikLogo}
 					companyName={'Kik Interactive'}
+					companyUrl={'https://www.kik.com/'}
 					title={'Backend Developer Intern'}
 					timeline={'May 2019 - August 2019'}>
 					<TextContent>
-						During my time here, I worked on several of Kik's microservices. At the
-						time, the company was going through a rewrite of the app which included
-						moving Kin Marketplace out of beta.
+						During my time here, I worked on several of Kik's{' '}
+						<b>Go and Java GRPC microservices</b>. At the time, the company was going
+						through a rewrite of the app which included moving Kin Marketplace out of
+						beta.
 					</TextContent>
 					<TextContent>
 						I developed server infrastructure supporting the release version of Kin
@@ -45,40 +47,44 @@ class Experience extends React.Component<any> {
 				<ExperienceSubSection
 					companyLogo={SMSLogo}
 					companyName={'Secret Mission Software'}
+					companyUrl={'http://www.secretmission.io/'}
 					title={'Software Developer Intern'}
 					timeline={'September 2018 - December 2018'}>
 					<TextContent>
-						Secret Mission Software is a small software consulting company so while I
-						was here, I got a ton of exposure to different work and was a critical
-						member of the team. Most of my time was allocated to project with a makeup
-						startup based in LA called ShopHush.
+						Secret Mission Software was a newly-formed software consulting company so
+						while I was here, I got a ton of exposure to different work and was a
+						critical member of the team. Most of my time was allocated to project with a
+						makeup startup based in LA called ShopHush.
 					</TextContent>
 					<TextContent>
-						My job was to work on the Android side of a social media app they wanted to
-						release. I ended up writing all of the instant messaging and notifications
-						features on the app, which included hooking it up to an XMPP service.
+						My job was to work on the <b>Android</b> side of a social media app they
+						wanted to release. I ended up writing all of the instant messaging and
+						notifications features on the app, which included hooking it up to an{' '}
+						<b>XMPP service</b>.
 					</TextContent>
 					<TextContent>
-						I also got to work with React on a personal finance app. Although the app
-						wasn't finished by the end of the work term, I did play a role in feature
-						planning, and architecture design.
+						I also got to work with <b>React</b> on a personal finance app. Although the
+						app wasn't finished by the end of the work term, I did play a role in
+						feature planning, and architecture design.
 					</TextContent>
 				</ExperienceSubSection>
 				<ExperienceSubSection
 					companyLogo={SensoftLogo}
 					companyName={'Sensors & Software'}
+					companyUrl={'https://www.sensoft.ca/'}
 					title={'Software Developer Intern'}
 					timeline={'January 2018 - April 2018'}>
 					<TextContent>
 						At Sensors and Software, I developed a browser interface for a
 						research-oriented ground penetrating radar. The device could hook up to 8
-						transducers and simulanteously collect data while running. The work I did
-						here was streaming data from the transducer and setting up configuration
-						editors for the device.
+						transducers and simulanteously collect data while running. My work here
+						involved streaming data from the radar using <b>websockets</b>, and building
+						the configuration editors.
 					</TextContent>
 					<TextContent>
-						I also had the opportunity to write a program that would autogenerate
-						analytics reports of what features people used the most on the radar.
+						I also had the opportunity to write a <b>Python</b> program that would
+						autogenerate usage analytics reports of the different GPR products
+						available.
 					</TextContent>
 				</ExperienceSubSection>
 				<EndSpace />

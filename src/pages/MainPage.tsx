@@ -1,8 +1,5 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { observer } from 'mobx-react'
-
-import { AppState } from 'App/AppState'
 import { DIMENSIONS, ANIMATION } from 'App/AppConstants'
 
 import Introduction from 'sections/Introduction'
@@ -15,7 +12,7 @@ import Footer from 'sections/Footer'
 const Page = styled.div`
 	height: 100%;
 	transition: margin-left ${ANIMATION.SIDEBAR};
-	margin-left: ${DIMENSIONS.SIDEBAR_WIDTH_CLOSE};
+	margin-left: 0;
 	display: flex;
 	justify-content: center;
 	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
@@ -23,33 +20,17 @@ const Page = styled.div`
 	}
 `
 const Centered = styled.div`
-	margin-left: 20px;
 	margin-right: 20px;
 	@media only screen and (max-width: ${DIMENSIONS.BREAK_L}) {
 		width: 100%;
 	}
-	@media only screen and (min-width: ${DIMENSIONS.BREAK_XL}) {
+	@media only screen and (min-width: ${DIMENSIONS.BREAK_L}) {
 		width: ${DIMENSIONS.BREAK_L};
+		margin-left: 20px;
 	}
 `
 
-interface IProperties {
-	appState: AppState
-}
-
-@observer
-export default class MainPage extends React.Component<IProperties> {
-	constructor(props: IProperties) {
-		super(props)
-		this.toggleSidebar = this.toggleSidebar.bind(this)
-	}
-
-	private toggleSidebar() {
-		this.props.appState.sidebarIsOpen
-			? this.props.appState.closeSidebar()
-			: this.props.appState.openSidebar()
-	}
-
+export default class MainPage extends React.Component {
 	public render() {
 		return (
 			<Page>

@@ -7,11 +7,13 @@ import { DIMENSIONS } from 'App/AppConstants'
 
 const PointContainer = styled.div`
 	height: ${DIMENSIONS.SECTION_SIDE_LENGTH};
-	width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
 	min-width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_S}) {
+		min-width: ${DIMENSIONS.SECTION_SIDE_LENGTH_S};
+	}
 `
 const TextContainer = styled.div`
 	width: 100%;
@@ -19,6 +21,10 @@ const TextContainer = styled.div`
 	margin-left: 50px;
 	display: flex;
 	align-items: center;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_S}) {
+		margin-left: 0px;
+		justify-content: center;
+	}
 `
 
 interface IProps {

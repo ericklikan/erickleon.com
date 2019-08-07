@@ -11,9 +11,10 @@ const Container = styled.div`
 	align-content: center;
 	margin-left: 20px;
 	transform: translate(0, -20px);
-	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_S}) {
 		margin-top: 30px;
 		margin-left: 0;
+		flex-direction: column;
 	}
 `
 const LogoContainer = styled.div`
@@ -24,8 +25,12 @@ const LogoContainer = styled.div`
 	align-items: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
-		margin-right: 20px;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_S}) {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_S}) {
+		width: 100%;
 	}
 `
 const Logo = styled.img`
@@ -34,15 +39,11 @@ const Logo = styled.img`
 const TextContainer = styled.div`
 	width: 100%;
 	margin: 0;
-	margin-left: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
-		flex-direction: column;
-		align-items: flex-start;
-	}
+	text-align: center;
 `
 const Title = styled.p`
 	font-weight: 400;
@@ -66,10 +67,19 @@ const ContentContainer = styled.div`
 		margin-left: 0;
 	}
 `
+const StyledLink = styled.a`
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		color: #4682b4;
+	}
+`
 
 interface IProperties {
 	companyLogo: string
 	companyName: string
+	companyUrl: string
 	title: string
 	timeline: string
 }
@@ -83,7 +93,11 @@ class ExperienceSubSection extends React.Component<IProperties> {
 						<Logo src={this.props.companyLogo} alt={this.props.companyName} />
 					</LogoContainer>
 					<TextContainer>
-						<Subtitle>{this.props.companyName}</Subtitle>
+						<Subtitle>
+							<StyledLink href={this.props.companyUrl}>
+								{this.props.companyName}
+							</StyledLink>
+						</Subtitle>
 						<Title>{this.props.title}</Title>
 					</TextContainer>
 				</Container>
