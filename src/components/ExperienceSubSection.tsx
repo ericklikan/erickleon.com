@@ -46,9 +46,9 @@ const TextContainer = styled.div`
 	text-align: center;
 `
 const Title = styled.p`
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 20px;
-	font-family: monospace;
+	font-family: 'Courier New', Courier, monospace;
 	color: #696969;
 	margin: 0;
 `

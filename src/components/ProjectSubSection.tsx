@@ -85,7 +85,7 @@ const ImageContainer = styled.div`
 `
 const Link = styled.a`
 	text-decoration: none;
-	font-family: monospace;
+	font-family: Courier, monospace;
 	font-size: 18px;
 	padding: 15px;
 	background-color: #ebebeb;

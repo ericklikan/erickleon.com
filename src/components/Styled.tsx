@@ -11,7 +11,7 @@ export const Centered = styled.div`
 export const Title = styled.p`
 	text-align: center;
 	margin: auto;
-	font-family: monospace;
+	font-family: Courier, monospace;
 	font-weight: 500;
 	font-size: ${DIMENSIONS.TITLE_SIZE};
 	color: #3d3d3d;
