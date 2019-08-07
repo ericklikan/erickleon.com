@@ -1,8 +1,10 @@
 import * as React from 'react'
 import styled from 'styled-components'
+
+import { DIMENSIONS } from 'App/AppConstants'
+
 import SectionTitle from 'components/SectionTitle'
 import Line from 'components/Line'
-import { DIMENSIONS } from 'App/AppConstants'
 
 export const Container = styled.div`
 	display: flex;
@@ -12,10 +14,12 @@ export const Container = styled.div`
 	margin: 0;
 `
 const LineContainer = styled.div`
-	width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
 	min-width: ${DIMENSIONS.SECTION_SIDE_LENGTH};
 	display: flex;
 	justify-content: center;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_S}) {
+		min-width: ${DIMENSIONS.SECTION_SIDE_LENGTH_S};
+	}
 `
 const ContentContainer = styled.div`
 	width: 100%;

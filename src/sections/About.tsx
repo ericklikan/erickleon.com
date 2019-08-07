@@ -1,31 +1,23 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Section from 'components/Section'
-import { TextContent } from 'components/Styled'
+import { TextContent, EndSpace } from 'components/Styled'
 import about from 'static/about.jpg'
 import { DIMENSIONS } from 'App/AppConstants'
 
 const AboutImage = styled.img`
 	width: 200px;
 	height: auto;
-	border-radius: 30px;
-	transition: 0.5s;
-	box-shadow: 5px 5px 10px grey;
+	border-radius: ${DIMENSIONS.IMAGE_BORDER_RADIUS};
 `
 const TextContainer = styled.div`
 	margin-right: 30px;
-	flex: auto;
 `
 const ImageContainer = styled.div`
 	float: right;
-	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	${AboutImage}:hover {
-		box-shadow: 10px 10px 20px grey;
-		transform: translate(-2px, -2px);
-	}
 `
 const FlexContainer = styled.div`
 	display: flex;
@@ -44,23 +36,29 @@ class About extends React.Component<any> {
 				<FlexContainer>
 					<TextContainer>
 						<TextContent>
-							I’m currently in third year studying Computer Engineering at Waterloo.
+							I’m currently a third year <b>Computer Engineering</b> student at{' '}
+							<b>Waterloo</b> looking to pursue a career as a{' '}
+							<b>software developer</b>.
 						</TextContent>
 						<TextContent>
-							I've been a builder since I was a kid. Beginning with Lego creations to
-							building PCs, and then moving onto electronic projects. I just love that
-							feeling of turning ideas a reality and it’s what led me to becoming a
-							developer.
+							So far, I've had three amazing work terms learning something a little
+							bit different each time, but each time I take one step in becoming a
+							better developer.
 						</TextContent>
 						<TextContent>
-							In my spare time you can find me drinking some coffees, at the gym, or
-							going on hikes.
+							In my spare time you can find me drinking <b>coffee</b> (count the cups
+							I'm holding{' '}
+							<span role="img" aria-label="coffee">
+								☕
+							</span>
+							), at the gym, or working on super cool projects.
 						</TextContent>
 					</TextContainer>
 					<ImageContainer>
 						<AboutImage src={about} />
 					</ImageContainer>
 				</FlexContainer>
+				<EndSpace />
 			</Section>
 		)
 	}

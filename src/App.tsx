@@ -1,7 +1,5 @@
 import React from 'react'
-import Sidebar from 'sections/Sidebar'
 import MainPage from 'pages/MainPage'
-import { appState } from 'App/AppState'
 import styled from 'styled-components'
 
 const AppDiv = styled.div`
@@ -9,10 +7,10 @@ const AppDiv = styled.div`
 `
 
 const App: React.FC = () => {
+	// TODO: add some sort of navbar?
 	return (
 		<AppDiv>
-			<Sidebar appState={appState} />
-			<MainPage appState={appState} />
+			<MainPage />
 		</AppDiv>
 	)
 }

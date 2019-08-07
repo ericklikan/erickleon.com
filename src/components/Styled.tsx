@@ -9,25 +9,45 @@ export const Centered = styled.div`
 
 // Use for Page title
 export const Title = styled.p`
-	font-family: 'Montserrat', sans-serif;
+	text-align: center;
+	margin: auto;
+	font-family: monospace;
 	font-weight: 500;
 	font-size: ${DIMENSIONS.TITLE_SIZE};
-	color: ${COLORS.TEXT_COLOR};
+	color: #3d3d3d;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		font-size: 32px;
+	}
 `
 
 // Use for section title
 export const SectionTitleContent = styled.p`
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-weight: 600;
 	font-size: ${DIMENSIONS.SECTION_TITLE_SIZE};
-	color: ${COLORS.TEXT_COLOR};
+	color: #3d3d3d;
 	margin: 0;
 `
 
 // Use for normal text
 export const TextContent = styled.p`
-	line-height: 1.4;
+	line-height: 2;
 	font-family: 'Montserrat', sans-serif;
 	font-size: ${DIMENSIONS.TEXT_SIZE};
 	color: ${COLORS.TEXT_COLOR};
+	margin-bottom: 25px;
+`
+
+// Use for subtitles
+export const Subtitle = styled.p`
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: ${DIMENSIONS.SUBTITLE_SIZE};
+	color: #3d3d3d;
+	margin: 0;
+`
+
+// use at the end of sections if it looks too close
+export const EndSpace = styled.div`
+	height: 50px;
 `

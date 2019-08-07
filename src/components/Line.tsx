@@ -1,9 +1,9 @@
 import styled from 'styled-components'
-import { COLORS } from 'App/AppConstants'
+import { COLORS, DIMENSIONS } from 'App/AppConstants'
 
 export default styled.div`
 	height: 100%;
-	width: 6px;
+	width: ${DIMENSIONS.LINE_WIDTH};
 	background-color: ${COLORS.SIDE_LINE_COLOR};
-	border-radius: 3px;
+	border-radius: ${DIMENSIONS.LINE_BORDER_RADIUS};
 `

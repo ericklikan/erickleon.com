@@ -7,12 +7,12 @@ const OuterCircle = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #4472ca;
+	background-color: #1b3b6f;
 	transition: ${ANIMATION.POINT_OUTER};
 `
 const InnerCircle = styled.div`
 	border-radius: 50%;
-	background-color: #0a369d;
+	background-color: #4682b4;
 	transition: ${ANIMATION.POINT_INNER};
 `
 

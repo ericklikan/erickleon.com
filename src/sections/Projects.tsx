@@ -1,15 +1,34 @@
 import * as React from 'react'
 import Section from 'components/Section'
 import ProjectSubSection from 'components/ProjectSubSection'
-import { DIMENSIONS, COLORS } from 'App/AppConstants'
+import { COLORS, DIMENSIONS } from 'App/AppConstants'
 import styled from 'styled-components'
+
+import AutogardenerImage from 'static/AutoGardener.jpg'
+import PlaymojiImage from 'static/playmoji.png'
+import { EndSpace, TextContent } from 'components/Styled'
 
 const LineContainer = styled.div`
 	transform: translate(-8px, -16px);
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+		display: none;
+	}
 `
 const ProjectsContainer = styled.div`
 	transform: translateY(-35px);
 `
+const StyledPlaymojiImage = styled.img`
+	width: 100%;
+	height: auto;
+	border-radius: ${DIMENSIONS.IMAGE_BORDER_RADIUS};
+	border: black solid 1px;
+`
+const StyledAutoGardenerImage = styled.img`
+	width: 100%;
+	height: auto;
+	border-radius: ${DIMENSIONS.IMAGE_BORDER_RADIUS};
+`
+
 class Projects extends React.Component<any> {
 	public render() {
 		return (
@@ -24,16 +43,37 @@ class Projects extends React.Component<any> {
 							vectorEffect="non-scaling-stroke"
 							style={{
 								stroke: COLORS.SIDE_LINE_COLOR,
-								strokeWidth: '6px',
+								strokeWidth: DIMENSIONS.LINE_WIDTH,
 								strokeLinecap: 'round',
 							}}
 						/>
-						Sorry, your browser does not support inline SVG.
 					</svg>
 				</LineContainer>
 				<ProjectsContainer>
-					<ProjectSubSection index={1}></ProjectSubSection>
+					<ProjectSubSection
+						title="Autogardener"
+						image={<StyledAutoGardenerImage src={AutogardenerImage} />}
+						githubLink="https://github.com/ericklikan/autogardener-dashboard">
+						<TextContent>
+							I started working on this because I wanted to start growing some hot
+							peppers and soon enough, I not only had hot pepper, but a fully
+							automated gardening device. This project included a dashboard to monitor
+							and water the plants, even a voice control feature!
+						</TextContent>
+					</ProjectSubSection>
+					<ProjectSubSection
+						title="Playmoji"
+						image={<StyledPlaymojiImage src={PlaymojiImage} />}
+						githubLink="https://github.com/Jli0423/PlayMoji">
+						<TextContent>
+							Playmoji is an emoji-to-playlist converter that we built at EngHack
+							2019. Using a series of emojis that's on your mind, your favourite
+							songs, and some magic with the Spotify API, we generate a brand new
+							playlist just for you!
+						</TextContent>
+					</ProjectSubSection>
 				</ProjectsContainer>
+				<EndSpace />
 			</Section>
 		)
 	}

@@ -1,7 +1,8 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { DIMENSIONS, COLORS } from 'App/AppConstants'
+import { DIMENSIONS } from 'App/AppConstants'
 import Line from 'components/Line'
+import { Subtitle } from './Styled'
 
 const Container = styled.div`
 	display: flex;
@@ -10,9 +11,10 @@ const Container = styled.div`
 	align-content: center;
 	margin-left: 20px;
 	transform: translate(0, -20px);
-	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_S}) {
 		margin-top: 30px;
 		margin-left: 0;
+		flex-direction: column;
 	}
 `
 const LogoContainer = styled.div`
@@ -23,8 +25,12 @@ const LogoContainer = styled.div`
 	align-items: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
-		margin-right: 20px;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_S}) {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_S}) {
+		width: 100%;
 	}
 `
 const Logo = styled.img`
@@ -33,32 +39,17 @@ const Logo = styled.img`
 const TextContainer = styled.div`
 	width: 100%;
 	margin: 0;
-	margin-left: 40px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
-		flex-direction: column;
-		align-items: flex-start;
-	}
-`
-const CompanyName = styled.p`
-	font-family: 'Montserrat';
-	font-weight: 600;
-	font-size: ${DIMENSIONS.SUBTITLE_SIZE};
-	color: ${COLORS.TEXT_COLOR};
-	margin: 0;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
 `
 const Title = styled.p`
 	font-weight: 400;
 	font-size: 20px;
-	font-family: 'Montserrat', sans-serif;
-	margin: 0;
-`
-const Timeline = styled.div`
-	font-weight: 400;
-	font-size: 20px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: monospace;
+	color: #696969;
 	margin: 0;
 `
 const LineContainer = styled.div`
@@ -76,10 +67,19 @@ const ContentContainer = styled.div`
 		margin-left: 0;
 	}
 `
+const StyledLink = styled.a`
+	color: inherit;
+	text-decoration: none;
+
+	&:hover {
+		color: #4682b4;
+	}
+`
 
 interface IProperties {
 	companyLogo: string
 	companyName: string
+	companyUrl: string
 	title: string
 	timeline: string
 }
@@ -93,11 +93,12 @@ class ExperienceSubSection extends React.Component<IProperties> {
 						<Logo src={this.props.companyLogo} alt={this.props.companyName} />
 					</LogoContainer>
 					<TextContainer>
-						<div>
-							<CompanyName>{this.props.companyName}</CompanyName>
-							<Title>{this.props.title}</Title>
-						</div>
-						<Timeline>{this.props.timeline}</Timeline>
+						<Subtitle>
+							<StyledLink href={this.props.companyUrl}>
+								{this.props.companyName}
+							</StyledLink>
+						</Subtitle>
+						<Title>{this.props.title}</Title>
 					</TextContainer>
 				</Container>
 				<Container>
