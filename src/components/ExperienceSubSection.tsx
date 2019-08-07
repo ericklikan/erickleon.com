@@ -94,7 +94,7 @@ class ExperienceSubSection extends React.Component<IProperties> {
 					</LogoContainer>
 					<TextContainer>
 						<Subtitle>
-							<StyledLink href={this.props.companyUrl}>
+							<StyledLink href={this.props.companyUrl} target="_blank">
 								{this.props.companyName}
 							</StyledLink>
 						</Subtitle>

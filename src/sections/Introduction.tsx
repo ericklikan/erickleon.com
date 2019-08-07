@@ -181,13 +181,13 @@ class Introduction extends React.Component<{}, IState> {
 					</Title>
 				</IntroductionContent>
 				<MoreInfoLinks>
-					<Link href="https://github.com/ericklikan">
+					<Link href="https://github.com/ericklikan" target="_blank">
 						<i className="fa fa-github" /> GitHub
 					</Link>
-					<Link href={Resume}>
+					<Link href={Resume} target="_blank">
 						<i className="fa fa-file-text-o" /> Resume
 					</Link>
-					<Link href="https://www.linkedin.com/in/erick-leon/">
+					<Link href="https://www.linkedin.com/in/erick-leon/" target="_blank">
 						<i className="fa fa-linkedin-square" /> LinkedIn
 					</Link>
 				</MoreInfoLinks>

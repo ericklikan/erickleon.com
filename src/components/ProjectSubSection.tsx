@@ -141,7 +141,7 @@ class ProjectSubSection extends React.Component<IProperties, IState> {
 					</TitleContainer>
 					<TextContainer>
 						<Text>{this.props.children}</Text>
-						<Link href={this.props.githubLink}>
+						<Link href={this.props.githubLink} target="_blank">
 							<i className="fa fa-github" /> Check it out!
 						</Link>
 					</TextContainer>

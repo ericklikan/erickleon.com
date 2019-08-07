@@ -11,23 +11,14 @@ import Footer from 'sections/Footer'
 
 const Page = styled.div`
 	height: 100%;
-	transition: margin-left ${ANIMATION.SIDEBAR};
-	margin-left: 0;
-	display: flex;
-	justify-content: center;
-	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
-		margin-left: 0;
-	}
 `
 const Centered = styled.div`
-	margin-right: 20px;
+	margin: auto;
 	@media only screen and (max-width: ${DIMENSIONS.BREAK_L}) {
-		width: 100%;
+		width: 95%;
+		margin-right: 20px;
 	}
-	@media only screen and (min-width: ${DIMENSIONS.BREAK_L}) {
-		width: ${DIMENSIONS.BREAK_L};
-		margin-left: 20px;
-	}
+	width: ${DIMENSIONS.BREAK_L};
 `
 
 export default class MainPage extends React.Component {
@@ -40,8 +31,8 @@ export default class MainPage extends React.Component {
 					<Experience />
 					<Projects />
 					<End />
-					<Footer />
 				</Centered>
+				<Footer />
 			</Page>
 		)
 	}
