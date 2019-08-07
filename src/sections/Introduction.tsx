@@ -39,7 +39,7 @@ const MoreInfoLinks = styled.div`
 const Link = styled.a`
 	width: 200px;
 	text-decoration: none;
-	font-family: monospace;
+	font-family: Courier, monospace;
 	font-weight: 700;
 	font-size: 25px;
 	padding: 20px;
@@ -59,7 +59,7 @@ const Link = styled.a`
 const DownArrow = styled.div<{ isTypingDone: boolean }>`
 	position: absolute;
 	text-align: center;
-	font-family: monospace;
+	font-family: Courier, monospace;
 	font-size: ${DIMENSIONS.TITLE_SIZE};
 	color: #696969;
 	line-height: 0.5;
