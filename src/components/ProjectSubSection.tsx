@@ -68,6 +68,9 @@ const TextContainer = styled.div`
 `
 const Text = styled.div`
 	margin: 0 50px;
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_S}) {
+		margin: auto;
+	}
 `
 const ImageContainer = styled.div`
 	margin: 50px 75px 50px 75px;
@@ -79,7 +82,8 @@ const ImageContainer = styled.div`
 		flex-direction: row;
 	}
 	@media only screen and (max-width: ${DIMENSIONS.BREAK_S}) {
-		margin: auto 75px;
+		margin: 20px;
+		margin-top: 50px;
 		flex-direction: column;
 	}
 `
