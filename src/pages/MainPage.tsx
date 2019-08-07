@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import { DIMENSIONS, ANIMATION } from 'App/AppConstants'
+import { DIMENSIONS } from 'App/AppConstants'
 
 import Introduction from 'sections/Introduction'
 import About from 'sections/About'
