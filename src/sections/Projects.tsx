@@ -55,10 +55,11 @@ class Projects extends React.Component<any> {
 						image={<StyledAutoGardenerImage src={AutogardenerImage} />}
 						githubLink="https://github.com/ericklikan/autogardener-dashboard">
 						<TextContent>
-							I started working on this because I wanted to start growing some hot
-							peppers and soon enough, I not only had hot pepper, but a fully
-							automated gardening device. This project included a dashboard to monitor
-							and water the plants, even a voice control feature!
+							Autogardener was a project I worked on for a few months, inspired by me
+							being lazy and wanting some hot peppers for my cooking. Soon enough, I
+							not only had hot peppers, but also a fully automated gardening device.
+							This project included a dashboard to monitor and water the plants, even
+							a voice control feature!
 						</TextContent>
 					</ProjectSubSection>
 					<ProjectSubSection
