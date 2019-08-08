@@ -38,10 +38,10 @@ class Experience extends React.Component<any> {
 						beta.
 					</TextContent>
 					<TextContent>
-						I developed server infrastructure supporting the release version of Kin
-						Marketplace within the app. The result was better support for kin earn and
-						spend opportunities, a much faster and maintainable chat theme assets
-						service, and reduced point of failures in the Kin transaction flow.
+						I developed critical server infrastructure supporting the release version of
+						Kin Marketplace within the app. The result was better support for kin earn
+						and spend opportunities, a much faster and maintainable chat assets service,
+						and reduced point of failures in the Kin transaction flow.
 					</TextContent>
 				</ExperienceSubSection>
 				<ExperienceSubSection
@@ -60,7 +60,7 @@ class Experience extends React.Component<any> {
 						My job was to work on the <b>Android</b> side of a social media app they
 						wanted to release. I ended up writing all of the instant messaging and
 						notifications features on the app, which included hooking it up to an{' '}
-						<b>XMPP service</b>.
+						<b>XMPP</b> service.
 					</TextContent>
 					<TextContent>
 						I also got to work with <b>React</b> on a personal finance app. Although the
@@ -77,9 +77,9 @@ class Experience extends React.Component<any> {
 					<TextContent>
 						At Sensors and Software, I developed a browser interface for a
 						research-oriented ground penetrating radar. The device could hook up to 8
-						transducers and simulanteously collect data while running. My work here
-						involved streaming data from the radar using <b>websockets</b>, and building
-						the configuration editors.
+						transducers and simulanteously collect data while running. The work I did
+						here involved streaming data from the radar using <b>websockets</b>, and
+						building the configuration editors.
 					</TextContent>
 					<TextContent>
 						I also had the opportunity to write a <b>Python</b> program that would

@@ -43,7 +43,7 @@ class About extends React.Component<IProps> {
 							<TextContent>
 								I’m currently a third year <b>Computer Engineering</b> student at{' '}
 								<b>Waterloo</b> looking to pursue a career as a{' '}
-								<b>software developer</b>.
+								<b>Software Developer</b>.
 							</TextContent>
 							<TextContent>
 								So far, I've had three amazing work terms learning something a

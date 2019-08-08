@@ -1,4 +1,4 @@
-# Erick Leon Personal Website
+# [Erick Leon Personal Website] (erickleon.com)
 
 ## Quickstart
 
@@ -17,5 +17,4 @@ firebase deploy
 
 -   [`TypeScript`](https://www.typescriptlang.org/)
 -   [`React`](https://reactjs.org/)
--   [`MobX`](https://mobx.js.org/)
 -   [`Styled Components`](https://www.styled-components.com/)
