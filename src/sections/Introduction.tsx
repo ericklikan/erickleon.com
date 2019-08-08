@@ -32,7 +32,7 @@ const MoreInfoLinks = styled.div`
 	display: flex;
 	justify-content: space-around;
 	transition: opacity 200ms;
-	@media only screen and (max-width: ${DIMENSIONS.BREAK_L}) {
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_L}) and (min-height: ${DIMENSIONS.BREAK_S}) {
 		flex-direction: column;
 	}
 `
@@ -53,6 +53,9 @@ const Link = styled.a`
 	transition: border-color 200ms;
 	&:hover {
 		border-color: ${COLORS.SIDEBAR_BACKGROUND_COLOR};
+	}
+	@media only screen and (max-width: ${DIMENSIONS.BREAK_L}) {
+		padding: 10px;
 	}
 `
 
@@ -83,6 +86,27 @@ const DownArrow = styled.div<{ isTypingDone: boolean }>`
 			bottom: 70px;
 		}
 	}
+	@media only screen and (max-height: ${DIMENSIONS.BREAK_S}) {
+		font-size: 20px;
+		@keyframes bounce {
+			0% {
+				bottom: 30px;
+			}
+			50% {
+				bottom: 10px;
+			}
+			100% {
+				bottom: 30px;
+			}
+		}
+	}
+`
+const UpArrow = styled.i`
+	border: solid #696969;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	transform: rotate(-135deg);
+	padding: 3px;
 `
 
 interface IState {
@@ -192,7 +216,8 @@ class Introduction extends React.Component<{}, IState> {
 					</Link>
 				</MoreInfoLinks>
 				<DownArrow isTypingDone={this.state.isTypingDone}>
-					^<br />|
+					<UpArrow />
+					<br />|
 				</DownArrow>
 			</IntroductionPage>
 		)
