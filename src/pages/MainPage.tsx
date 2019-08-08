@@ -22,12 +22,13 @@ const Centered = styled.div`
 `
 
 export default class MainPage extends React.Component {
+	private aboutRef = React.createRef<HTMLDivElement>()
 	public render() {
 		return (
 			<Page>
 				<Centered>
-					<Introduction />
-					<About />
+					<Introduction aboutRef={this.aboutRef} />
+					<About aboutRef={this.aboutRef} />
 					<Experience />
 					<Projects />
 					<End />

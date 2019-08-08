@@ -29,37 +29,43 @@ const FlexContainer = styled.div`
 	}
 `
 
-class About extends React.Component<any> {
+interface IProps {
+	aboutRef: React.Ref<HTMLDivElement>
+}
+
+class About extends React.Component<IProps> {
 	public render() {
 		return (
-			<Section title="About Me">
-				<FlexContainer>
-					<TextContainer>
-						<TextContent>
-							I’m currently a third year <b>Computer Engineering</b> student at{' '}
-							<b>Waterloo</b> looking to pursue a career as a{' '}
-							<b>software developer</b>.
-						</TextContent>
-						<TextContent>
-							So far, I've had three amazing work terms learning something a little
-							bit different each time, but each time I take one step in becoming a
-							better developer.
-						</TextContent>
-						<TextContent>
-							In my spare time you can find me drinking <b>coffee</b> (count the cups
-							I'm holding{' '}
-							<span role="img" aria-label="coffee">
-								☕
-							</span>
-							), at the gym, or working on super cool projects.
-						</TextContent>
-					</TextContainer>
-					<ImageContainer>
-						<AboutImage src={about} />
-					</ImageContainer>
-				</FlexContainer>
-				<EndSpace />
-			</Section>
+			<div ref={this.props.aboutRef}>
+				<Section title="About Me">
+					<FlexContainer>
+						<TextContainer>
+							<TextContent>
+								I’m currently a third year <b>Computer Engineering</b> student at{' '}
+								<b>Waterloo</b> looking to pursue a career as a{' '}
+								<b>software developer</b>.
+							</TextContent>
+							<TextContent>
+								So far, I've had three amazing work terms learning something a
+								little bit different each time, but each time I take one step in
+								becoming a better developer.
+							</TextContent>
+							<TextContent>
+								In my spare time you can find me drinking <b>coffee</b> (count the
+								cups I'm holding{' '}
+								<span role="img" aria-label="coffee">
+									☕
+								</span>
+								), at the gym, or working on super cool projects.
+							</TextContent>
+						</TextContainer>
+						<ImageContainer>
+							<AboutImage src={about} />
+						</ImageContainer>
+					</FlexContainer>
+					<EndSpace />
+				</Section>
+			</div>
 		)
 	}
 }

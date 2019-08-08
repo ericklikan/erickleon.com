@@ -62,9 +62,6 @@ const Link = styled.a`
 const DownArrow = styled.div<{ isTypingDone: boolean }>`
 	position: absolute;
 	text-align: center;
-	font-family: Courier, monospace;
-	font-size: ${DIMENSIONS.TITLE_SIZE};
-	color: #696969;
 	line-height: 0.5;
 	bottom: 70px;
 	left: 0;
@@ -87,7 +84,6 @@ const DownArrow = styled.div<{ isTypingDone: boolean }>`
 		}
 	}
 	@media only screen and (max-height: ${DIMENSIONS.BREAK_S}) {
-		font-size: 20px;
 		@keyframes bounce {
 			0% {
 				bottom: 30px;
@@ -103,11 +99,18 @@ const DownArrow = styled.div<{ isTypingDone: boolean }>`
 `
 const UpArrow = styled.i`
 	border: solid #696969;
-	border-width: 0 3px 3px 0;
+	border-width: 0 6px 6px 0;
 	display: inline-block;
 	transform: rotate(-135deg);
-	padding: 3px;
+	padding: 6px;
+	@media only screen and (max-height: ${DIMENSIONS.BREAK_S}) {
+		border-width: 0 3px 3px 0;
+		padding: 3px;
+	}
 `
+interface IProps {
+	aboutRef: React.RefObject<HTMLDivElement>
+}
 
 interface IState {
 	currentTyped: string
@@ -123,7 +126,7 @@ interface IState {
 	isTypingDone: boolean
 }
 
-class Introduction extends React.Component<{}, IState> {
+class Introduction extends React.Component<IProps, IState> {
 	// what to type/delete
 	private TypedData: string[] = ['Hey there!', "I'm Erick Leon, welcome to my site!"]
 
@@ -132,7 +135,7 @@ class Introduction extends React.Component<{}, IState> {
 	// amount of time to pause between sentences
 	private TypePause: number = 400
 
-	constructor(props: {}) {
+	constructor(props: IProps) {
 		super(props)
 		this.state = {
 			currentTyped: '',
@@ -144,6 +147,7 @@ class Introduction extends React.Component<{}, IState> {
 		// bind member functions to this
 		this.typeText = this.typeText.bind(this)
 		this.deleteText = this.deleteText.bind(this)
+		this.scrollToRef = this.scrollToRef.bind(this)
 	}
 
 	public componentDidMount() {
@@ -195,6 +199,13 @@ class Introduction extends React.Component<{}, IState> {
 		setTimeout(this.deleteText, this.TypeSpeed)
 	}
 
+	private scrollToRef() {
+		const offset: number = this.props.aboutRef.current
+			? this.props.aboutRef.current.offsetTop
+			: 0
+		window.scrollTo(0, offset)
+	}
+
 	public render() {
 		return (
 			<IntroductionPage>
@@ -216,8 +227,7 @@ class Introduction extends React.Component<{}, IState> {
 					</Link>
 				</MoreInfoLinks>
 				<DownArrow isTypingDone={this.state.isTypingDone}>
-					<UpArrow />
-					<br />|
+					<UpArrow onClick={this.scrollToRef} />
 				</DownArrow>
 			</IntroductionPage>
 		)
