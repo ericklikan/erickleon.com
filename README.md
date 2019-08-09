@@ -1,4 +1,4 @@
-# [Erick Leon Personal Website] (erickleon.com)
+# erickleon.com
 
 ## Quickstart
 
