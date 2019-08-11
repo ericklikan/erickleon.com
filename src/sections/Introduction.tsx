@@ -3,9 +3,6 @@ import { Title } from 'components/Styled'
 import styled from 'styled-components'
 import { DIMENSIONS, COLORS } from 'App/AppConstants'
 
-// tslint:disable-next-line: no-var-requires
-const Resume = require('static/ErickLeon.pdf')
-
 const IntroductionPage = styled.div`
 	height: 100vh;
 	transition: 500ms;
@@ -219,7 +216,7 @@ class Introduction extends React.Component<IProps, IState> {
 					<Link href="https://github.com/ericklikan" target="_blank">
 						<i className="fa fa-github" /> GitHub
 					</Link>
-					<Link href={Resume} target="_blank">
+					<Link href={'/static/ErickLeon.pdf'} target="_blank">
 						<i className="fa fa-file-text-o" /> Resume
 					</Link>
 					<Link href="https://www.linkedin.com/in/erick-leon/" target="_blank">
