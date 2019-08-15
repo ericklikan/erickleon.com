@@ -40,8 +40,8 @@ class Experience extends React.Component<any> {
 					<TextContent>
 						I developed critical server infrastructure supporting the release version of
 						Kin Marketplace within the app. The result was better support for kin earn
-						and spend opportunities, a much faster and maintainable chat assets service,
-						and reduced point of failures in the Kin transaction flow.
+						and spend opportunities, a much faster and more maintainable chat assets
+						service, and reduced point of failure in the Kin transaction flow.
 					</TextContent>
 				</ExperienceSubSection>
 				<ExperienceSubSection
@@ -53,8 +53,8 @@ class Experience extends React.Component<any> {
 					<TextContent>
 						Secret Mission Software was a newly-formed software consulting company so
 						while I was here, I got a ton of exposure to different work and was a
-						critical member of the team. Most of my time was allocated to project with a
-						makeup startup based in LA called ShopHush.
+						critical member of the team. Most of my time was allocated to a project with
+						a makeup startup based in LA called ShopHush.
 					</TextContent>
 					<TextContent>
 						My job was to work on the <b>Android</b> side of a social media app they
@@ -64,8 +64,8 @@ class Experience extends React.Component<any> {
 					</TextContent>
 					<TextContent>
 						I also got to work with <b>React</b> on a personal finance app. Although the
-						app wasn't finished by the end of the work term, I did play a role in
-						feature planning, and architecture design.
+						app wasn't finished by the end of the work term, I contributed to feature
+						planning, and architecture design.
 					</TextContent>
 				</ExperienceSubSection>
 				<ExperienceSubSection
