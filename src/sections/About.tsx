@@ -28,6 +28,9 @@ const FlexContainer = styled.div`
 		margin-left: 0px;
 	}
 `
+const RefContainer = styled.div`
+	padding-top: 50px;
+`
 
 interface IProps {
 	aboutRef: React.Ref<HTMLDivElement>
@@ -36,19 +39,19 @@ interface IProps {
 class About extends React.Component<IProps> {
 	public render() {
 		return (
-			<div ref={this.props.aboutRef}>
+			<RefContainer ref={this.props.aboutRef}>
 				<Section title="About Me">
 					<FlexContainer>
 						<TextContainer>
 							<TextContent>
-								I’m currently a third year <b>Computer Engineering</b> student at{' '}
-								<b>Waterloo</b> looking to pursue a career as a{' '}
+								I’m currently a third year <b>Computer Engineering</b> student at
+								the <b>University of Waterloo</b> looking to pursue a career as a{' '}
 								<b>Software Developer</b>.
 							</TextContent>
 							<TextContent>
-								So far, I've had three amazing work terms learning something a
-								little bit different each time, but each time I take one step in
-								becoming a better developer.
+								So far, I've had three amazing work terms learning something
+								different each time. I'm always working to grow and become a better
+								developer
 							</TextContent>
 							<TextContent>
 								In my spare time you can find me drinking <b>coffee</b> (count the
@@ -65,7 +68,7 @@ class About extends React.Component<IProps> {
 					</FlexContainer>
 					<EndSpace />
 				</Section>
-			</div>
+			</RefContainer>
 		)
 	}
 }
