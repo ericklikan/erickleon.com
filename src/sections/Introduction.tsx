@@ -94,6 +94,12 @@ const DownArrow = styled.div<{ isTypingDone: boolean }>`
 		}
 	}
 `
+const ArrowBox = styled.div<{ isTypingDone: boolean }>`
+	height: 50px;
+	transform: translateY(-35px);
+	margin: 0 45% 0 45%;
+	cursor: ${props => (props.isTypingDone ? 'pointer' : 'auto')};
+`
 const UpArrow = styled.i`
 	border: solid #696969;
 	border-width: 0 6px 6px 0;
@@ -105,6 +111,7 @@ const UpArrow = styled.i`
 		padding: 3px;
 	}
 `
+
 interface IProps {
 	aboutRef: React.RefObject<HTMLDivElement>
 }
@@ -224,7 +231,11 @@ class Introduction extends React.Component<IProps, IState> {
 					</Link>
 				</MoreInfoLinks>
 				<DownArrow isTypingDone={this.state.isTypingDone}>
-					<UpArrow onClick={this.scrollToRef} />
+					<UpArrow />
+					<ArrowBox
+						isTypingDone={this.state.isTypingDone}
+						onClick={() => this.state.isTypingDone && this.scrollToRef()}
+					/>
 				</DownArrow>
 			</IntroductionPage>
 		)

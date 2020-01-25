@@ -62,6 +62,7 @@ const LineContainer = styled.div`
 	}
 `
 const ContentContainer = styled.div`
+	width: 100%;
 	margin-left: 40px;
 	@media only screen and (max-width: ${DIMENSIONS.BREAK_M}) {
 		margin-left: 0;
