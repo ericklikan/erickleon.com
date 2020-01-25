@@ -21,7 +21,8 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"lint": "tslint 'src/**/*.{ts,tsx}'"
+		"lint": "tslint 'src/**/*.{ts,tsx}'",
+		"postbuild": "react-snap"
 	},
 	"eslintConfig": {
 		"extends": "react-app"
@@ -40,6 +41,7 @@
 	},
 	"devDependencies": {
 		"prettier": "^1.18.2",
+		"react-snap": "^1.23.0",
 		"tslint": "^5.18.0",
 		"tslint-config-prettier": "^1.18.0",
 		"tslint-config-standard": "^8.0.1",
