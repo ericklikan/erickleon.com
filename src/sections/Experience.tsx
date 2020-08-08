@@ -5,6 +5,7 @@ import { COLORS, DIMENSIONS } from 'App/AppConstants'
 import ExperienceSubSection from 'components/ExperienceSubSection'
 import { TextContent, EndSpace } from 'components/Styled'
 
+import RippleLogo from 'static/rippleLogo.svg'
 import KikLogo from 'static/kikLogo.svg'
 import SMSLogo from 'static/SMSLogo.png'
 import SensoftLogo from 'static/sensoftLogo.png'
@@ -25,6 +26,19 @@ class Experience extends React.Component<any> {
 		return (
 			<Section title="Experience">
 				<StartLine />
+				<ExperienceSubSection
+					companyLogo={RippleLogo}
+					companyName={'Ripple'}
+					companyUrl={'https://ripple.com/'}
+					title={'Software Engineering Intern'}
+					timeline={'January 2020 - April 2020'}>
+					<TextContent>
+						Working at Ripple was a great learning experience me, and surprisingly the
+						biggest company I've worked for so far! I worked on RippleNet, their
+						solution to better cross border payments and got a ton of exposure to
+						distributed systems, consensus, and message queue services.
+					</TextContent>
+				</ExperienceSubSection>
 				<ExperienceSubSection
 					companyLogo={KikLogo}
 					companyName={'Kik Interactive'}
@@ -51,10 +65,10 @@ class Experience extends React.Component<any> {
 					title={'Software Developer Intern'}
 					timeline={'September 2018 - December 2018'}>
 					<TextContent>
-						Secret Mission Software was a newly-formed software consulting company so
-						while I was here, I got a ton of exposure to different work and was a
-						critical member of the team. Most of my time was allocated to a project with
-						a makeup startup based in LA called ShopHush.
+						Secret Mission Software is a growing software consulting company so while I
+						was here, I got a ton of exposure to different work and was a critical
+						member of the team. Most of my time was allocated to a project with a makeup
+						startup based in LA called <b>Hush</b>.
 					</TextContent>
 					<TextContent>
 						My job was to work on the <b>Android</b> side of a social media app they

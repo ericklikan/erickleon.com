@@ -44,14 +44,14 @@ class About extends React.Component<IProps> {
 					<FlexContainer>
 						<TextContainer>
 							<TextContent>
-								I’m currently a third year <b>Computer Engineering</b> student at
+								I’m currently a fourth year <b>Computer Engineering</b> student at
 								the <b>University of Waterloo</b> looking to pursue a career as a{' '}
-								<b>Software Developer</b>.
+								<b>Software Engineer</b>.
 							</TextContent>
 							<TextContent>
-								So far, I've had three amazing work terms learning something
-								different each time. I'm always working to grow and become a better
-								developer
+								So far, I've completed four amazing internships and I aim to learn
+								something new each time. I'm always working to grow and become a
+								better developer.
 							</TextContent>
 							<TextContent>
 								In my spare time you can find me drinking <b>coffee</b> (count the
