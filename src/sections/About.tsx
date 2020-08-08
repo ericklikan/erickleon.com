@@ -49,9 +49,9 @@ class About extends React.Component<IProps> {
 								<b>Software Engineer</b>.
 							</TextContent>
 							<TextContent>
-								So far, I've completed three amazing internships and am on a fourth
-								one right now, learning something new each time. I'm always working
-								to grow and become a better developer.
+								So far, I've completed four amazing internships and I aim to learn
+								something new each time. I'm always working to grow and become a
+								better developer.
 							</TextContent>
 							<TextContent>
 								In my spare time you can find me drinking <b>coffee</b> (count the

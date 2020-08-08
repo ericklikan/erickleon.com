@@ -31,10 +31,12 @@ class Experience extends React.Component<any> {
 					companyName={'Ripple'}
 					companyUrl={'https://ripple.com/'}
 					title={'Software Engineering Intern'}
-					timeline={'January 2020 - Present'}>
+					timeline={'January 2020 - April 2020'}>
 					<TextContent>
-						Currently on an internship here working on RippleNet! Come back soon for
-						more details :)
+						Working at Ripple was a great learning experience me, and surprisingly the
+						biggest company I've worked for so far! I worked on RippleNet, their
+						solution to better cross border payments and got a ton of exposure to
+						distributed systems, consensus, and message queue services.
 					</TextContent>
 				</ExperienceSubSection>
 				<ExperienceSubSection
