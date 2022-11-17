@@ -9,6 +9,8 @@ import RippleLogo from 'static/rippleLogo.svg'
 import KikLogo from 'static/kikLogo.svg'
 import SMSLogo from 'static/SMSLogo.png'
 import SensoftLogo from 'static/sensoftLogo.png'
+import FBLogo from 'static/FBLogo.png'
+import MetaLogo from 'static/metaLogo.png'
 
 const StartLine = styled.div`
 	height: 100px;
@@ -26,6 +28,27 @@ class Experience extends React.Component<any> {
 		return (
 			<Section title="Experience">
 				<StartLine />
+				<ExperienceSubSection
+					companyLogo={MetaLogo}
+					companyName={'Meta (Facebook)'}
+					companyUrl={'https://facebook.com/'}
+					title={'Software Engineer'}
+					timeline={'Present'}>
+					<TextContent>
+						Currently working on Facebook Groups building some cool features!
+					</TextContent>
+				</ExperienceSubSection>
+				<ExperienceSubSection
+					companyLogo={FBLogo}
+					companyName={'Facebook'}
+					companyUrl={'https://facebook.com/'}
+					title={'Software Engineering Intern'}
+					timeline={'September 2020 - Present'}>
+					<TextContent>
+						I spent my time this internship writing the first iteration for streamer
+						schedules for streamer pages on Facebook Gaming!
+					</TextContent>
+				</ExperienceSubSection>
 				<ExperienceSubSection
 					companyLogo={RippleLogo}
 					companyName={'Ripple'}

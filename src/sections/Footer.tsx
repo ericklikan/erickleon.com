@@ -29,7 +29,7 @@ class Footer extends React.Component {
 						Have any more questions for me?
 						<br />
 						Email me at{' '}
-						<EmailLink href="mailto:eeleon@uwaterloo.ca">eeleon@uwaterloo.ca</EmailLink>
+						<EmailLink href="erick@erickleon.com">erick@erickleon.com</EmailLink>
 					</Text>
 				</TextContainer>
 			</FooterDiv>

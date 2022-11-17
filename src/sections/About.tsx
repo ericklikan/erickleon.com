@@ -44,22 +44,15 @@ class About extends React.Component<IProps> {
 					<FlexContainer>
 						<TextContainer>
 							<TextContent>
-								I’m currently a fourth year <b>Computer Engineering</b> student at
-								the <b>University of Waterloo</b> looking to pursue a career as a{' '}
-								<b>Software Engineer</b>.
+								I’m currently a full time Software Engineer at Meta! I graduated{' '}
+								<b>Computer Engineering</b> at the University of Waterloo
 							</TextContent>
 							<TextContent>
-								So far, I've completed four amazing internships and I aim to learn
-								something new each time. I'm always working to grow and become a
-								better developer.
-							</TextContent>
-							<TextContent>
-								In my spare time you can find me drinking <b>coffee</b> (count the
-								cups I'm holding{' '}
+								In my spare time you can find me drinking making lattes{' '}
 								<span role="img" aria-label="coffee">
 									☕
 								</span>
-								), at the gym, or working on super cool projects.
+								, exploring the city, or playing tennis
 							</TextContent>
 						</TextContainer>
 						<ImageContainer>
